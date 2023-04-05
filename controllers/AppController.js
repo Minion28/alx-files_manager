@@ -11,11 +11,11 @@ class AppController {
   }
 
   static async getStats(request, response) {
-    const stat = {
+    const stats = {
       users: await dbClient.nbUsers(),
       files: await dbClient.nbFiles(),
     };
-    response.status(200).send(stat);
+    response.status(200).send(stats);
   }
 }
 
